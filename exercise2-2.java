@@ -1,67 +1,48 @@
 package com;
- import java.util.Scanner;
- 
+import java.util.Scanner;
+
+
 public class Test {
     public static Scanner input;
-	
-	public static float mpg(int x , int y ){
-		return (float) x / y;
-		  
-	}
+    public static void show(String msg){
+    	System.out.println(msg);
+    }
 	public static void main(String[] args) {
-	 /*
-	  * Drivers are concerned with the mileage their automobiles get. One driver has
-
-kept track of several trips by recording the miles driven and gallons used for each tankful. 
-
-Develop a Java application that will 
-input the miles driven and gallons used (both as integers) for each trip.
-
-The program should calculate and display the miles per gallon obtained for each trip and 
-print the combined miles per gallon obtained for all trips up to this point. 
-
-All averaging calculations should produce floating-point results.
-Use class Scanner and sentinel-controlled repetition to obtain the data from the user.
-	  */
-		input = new Scanner(System.in);
+		/*
+			   2- Write a Java program that allows the user to choose the correct answer of a question.
+				See the example below:
+				What is the correct way to declare a variable to store an integer value in Java?
+				a. int 1x=10;
+				b. int x=10;
+				c. float x=10.0f;
+				d. string x="10";
+				Enter your choice: c
+				  
+		 */
 		
-		int miles;
-		int gallons;
-		 float mpg;
-		 float mpgAll = 0; 
-		 int milesAll = 0;
-		 int gallonsAll = 0;
-
-	      for(int i = 1; i <3; i++) {
-		         
-		   
-	    		System.out.println("Enter Trip" + i +" Miles drived: ");
-	    		
-				miles= input.nextInt();
-				
-				System.out.println("Enter Gallons used for Trip " + i +" : ");
-				
-				gallons = input.nextInt();
-				
-				mpg = mpg(miles, gallons);
- 				System.out.println("Miles Per Gallons for this trip #"+i + " is = " + mpg);
- 			    System.out.println("--------------------");
-			    milesAll= milesAll + miles;
-			    mpgAll = mpgAll + mpg; 
-			    gallonsAll = gallonsAll + gallonsAll;
-		        System.out.println("Miles Per Gallons for all " + i +" trips  so far  = " + mpgAll);
-		        System.out.println("--------------------");
-
-		   }
-			    
-		       System.out.println("You've drived " + milesAll + " & used " + gallonsAll +" gallons");
-	           System.out.println("Miles Per Gallons for all trips  is = " + mpgAll);
-
+		input= new Scanner(System.in);
+		String q = "What is the correct way to declare a v;ariable to store an integer value in Java?";
+		String a = "a.  int 1x= 10;";	
+		String b = "b. int x=10;";
+		String c = "c. float x=10.0f;";
+	    String d = "d. string x=\"10\";";
+	     
+	    String  answer = "c"  ;
+	    String answer2 = "C";
 	 
-		
-	}
-
- 
+	    show(q+"\n \n"+a+"\n"+b+"\n"+c+"\n"+d+"\n\n"+"Your Choice a, b , c or d:");
+	   
+	    String userAnswer = input.next();
+	    
+	    if(userAnswer.equals(answer)|| userAnswer.equals(answer2)){
+	    	show("correct");
+	    }else{
+	    	show("wrong");
+	    }
+	    
+	   
 	
+
+	}
 
 }
