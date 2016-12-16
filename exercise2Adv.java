@@ -1,13 +1,13 @@
 package com;
 import java.util.Scanner;
 public class Test {
-	//declaring global scanner class
+   //declaring global scanner class
     public static Scanner input = new Scanner(System.in);
     //system out print method
     public static void show(String x){
     	System.out.print(x);
     }
-  //method calculate  Miles per gallons
+    //method calculate  Miles per gallons
     public  static float mpgCalc( int x ,  int y){
     	float z = (float) x /  y;
     	return z;
@@ -24,6 +24,7 @@ public class Test {
 		mpgAll = 0;
 		milesAll = 0;
 		gasAll =0;
+		
 		// for loop .. for Each Trip 
 		for(i= 1 ; i<= 3 ; i++){
 			// Prompt a trip data and should be greater than 0
@@ -31,12 +32,12 @@ public class Test {
 		    
 		    show("Miles Driven : \n");
 		    
-			miles = input.nextInt();
+		    miles = input.nextInt();
 			
 			// should be greater than 0
 		    while(miles <= 0 ){
 		    	  show("Wrong Entry , Try Again Enter Miles Driven: \n");
-					miles = input.nextInt();
+			  miles = input.nextInt();
 		    }
 		    
 		    
@@ -45,7 +46,7 @@ public class Test {
 			// should be greater than 0
 		    while(gas <= 0){
 		    	show("Wrong Entry , Try Again Enter Gallons used :\n");
-				gas = input.nextInt();
+			gas = input.nextInt();
 		    }
 		    
 	      // calculate mpg for this Trip
