@@ -67,9 +67,9 @@ public class Test {
 		   show(" your average miles per gallons for trip (" + i + ") is : "+ mpg + "\n\n");
 		   
 		   // calculate total results 
-		   mpgAll = mpg + mpgAll;
-		   milesAll = miles+ milesAll;
-		   gasAll = gas + gasAll;
+		   mpgAll += mpg  ;
+		   milesAll += miles ;
+		   gasAll += gas ;
 		}
 		
 		show("Total miles driven:" + milesAll  + "\n");
